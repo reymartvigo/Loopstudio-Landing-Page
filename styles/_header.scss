@@ -1,0 +1,270 @@
+@use "variable";
+
+header {
+  width: 100%;
+  height: 100%;
+  background: url(../image/mobile/image-hero.jpg) no-repeat;
+  background-size: 100%;
+  padding: 3rem 1rem;
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .nav-header {
+    animation: 0.3s ease-in 0s 1 slideInRight;
+    display: none;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: variable.$Black;
+    color: white;
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav-logo {
+        width: 10rem;
+      }
+      .buttons-tab {
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          img {
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .links-tab {
+      margin-top: 5rem;
+      font-family: variable.$paragraph;
+      ul {
+        cursor: pointer;
+        line-height: 3rem;
+        color: variable.$White;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        gap: 1rem;
+        list-style-type: none;
+      }
+
+      li:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 10rem;
+    }
+    .buttons {
+      display: flex;
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+          width: 1.5rem;
+        }
+      }
+
+      #close {
+        display: none;
+      }
+    }
+
+    .links {
+      display: none;
+      font-family: variable.$heading;
+      ul {
+        color: variable.$White;
+        display: flex;
+        gap: 1rem;
+        list-style-type: none;
+      }
+    }
+  }
+
+  .bottom-header {
+    width: 100%;
+    margin-top: 8rem;
+    padding: 1rem 1.5rem;
+    color: variable.$White;
+    letter-spacing: 1px;
+    border: 2px solid white;
+
+    h1 {
+      width: auto;
+      letter-spacing: 1px;
+      line-height: 2.8rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and(max-width: 320px) {
+  header {
+    .bottom-header {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 3rem 4rem;
+
+    .nav-header {
+      padding: 3rem 4rem;
+    }
+
+    .bottom-header {
+      width: 70%;
+
+      h1 {
+        line-height: 4rem;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 6rem;
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        width: 10rem;
+      }
+      .buttons {
+        display: none;
+      }
+
+      .links {
+        display: flex;
+
+        ul {
+          display: flex;
+          gap: 1.5rem;
+        }
+        li {
+          border: 1px solid transparent;
+        }
+        li:hover {
+          cursor: pointer;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+
+    .bottom-header {
+      width: 60%;
+      padding: 2rem 1.5rem;
+      h1 {
+        line-height: 3.5rem;
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: 100% 80%;
+    background-position: top;
+    padding: 4rem 8rem;
+
+    .top-header {
+      .logo {
+        width: 12.5rem;
+      }
+
+      .links {
+        display: flex;
+
+        ul {
+          gap: 2rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .bottom-header {
+      max-width: 60%;
+      padding: 2.5rem 2rem;
+      h1 {
+        line-height: 4.5rem;
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: 100% 80%;
+    background-position: top;
+    padding: 5rem 15rem;
+
+    .top-header {
+      .logo {
+        width: 20rem;
+      }
+
+      .links {
+        ul {
+          gap: 3rem;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .bottom-header {
+      margin-top: 15rem;
+      max-width: 60%;
+      padding: 2.5rem 2rem;
+      h1 {
+        line-height: 10rem;
+        font-size: 10rem;
+      }
+    }
+  }
+}

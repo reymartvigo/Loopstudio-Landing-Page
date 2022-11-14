@@ -1,0 +1,675 @@
+header {
+  width: 100%;
+  height: 100%;
+  background: url(../image/mobile/image-hero.jpg) no-repeat;
+  background-size: 100%;
+  padding: 3rem 1rem;
+}
+@-webkit-keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+header .nav-header {
+  -webkit-animation: 0.3s ease-in 0s 1 slideInRight;
+          animation: 0.3s ease-in 0s 1 slideInRight;
+  display: none;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 0%);
+  color: white;
+}
+header .nav-header .nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-header .nav-top .nav-logo {
+  width: 10rem;
+}
+header .nav-header .nav-top .buttons-tab button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+header .nav-header .nav-top .buttons-tab button img {
+  width: 1.5rem;
+}
+header .nav-header .links-tab {
+  margin-top: 5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+header .nav-header .links-tab ul {
+  cursor: pointer;
+  line-height: 3rem;
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1rem;
+  list-style-type: none;
+}
+header .nav-header .links-tab li:hover {
+  font-weight: bold;
+}
+header .top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top-header .logo {
+  width: 10rem;
+}
+header .top-header .buttons {
+  display: flex;
+}
+header .top-header .buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+header .top-header .buttons button img {
+  width: 1.5rem;
+}
+header .top-header .buttons #close {
+  display: none;
+}
+header .top-header .links {
+  display: none;
+  font-family: "Alata", sans-serif;
+}
+header .top-header .links ul {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+header .bottom-header {
+  width: 100%;
+  margin-top: 8rem;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 1px;
+  border: 2px solid white;
+}
+header .bottom-header h1 {
+  width: auto;
+  letter-spacing: 1px;
+  line-height: 2.8rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 320px) {
+  header .bottom-header h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 3rem 4rem;
+  }
+  header .nav-header {
+    padding: 3rem 4rem;
+  }
+  header .bottom-header {
+    width: 70%;
+  }
+  header .bottom-header h1 {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 6rem;
+  }
+  header .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .top-header .logo {
+    width: 10rem;
+  }
+  header .top-header .buttons {
+    display: none;
+  }
+  header .top-header .links {
+    display: flex;
+  }
+  header .top-header .links ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  header .top-header .links li {
+    border: 1px solid transparent;
+  }
+  header .top-header .links li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+  header .bottom-header {
+    width: 60%;
+    padding: 2rem 1.5rem;
+  }
+  header .bottom-header h1 {
+    line-height: 3.5rem;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: 100% 80%;
+    background-position: top;
+    padding: 4rem 8rem;
+  }
+  header .top-header .logo {
+    width: 12.5rem;
+  }
+  header .top-header .links {
+    display: flex;
+  }
+  header .top-header .links ul {
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  header .bottom-header {
+    max-width: 60%;
+    padding: 2.5rem 2rem;
+  }
+  header .bottom-header h1 {
+    line-height: 4.5rem;
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  header {
+    background: url(../image/desktop/image-hero.jpg) no-repeat;
+    background-size: 100% 80%;
+    background-position: top;
+    padding: 5rem 15rem;
+  }
+  header .top-header .logo {
+    width: 20rem;
+  }
+  header .top-header .links ul {
+    gap: 3rem;
+    font-size: 2rem;
+  }
+  header .bottom-header {
+    margin-top: 15rem;
+    max-width: 60%;
+    padding: 2.5rem 2rem;
+  }
+  header .bottom-header h1 {
+    line-height: 10rem;
+    font-size: 10rem;
+  }
+}
+main {
+  width: 100%;
+  padding: 5rem 2rem;
+}
+main .leader .interactive {
+  width: 100%;
+  height: 15rem;
+  background: url(../image/mobile/image-interactive.jpg) no-repeat;
+  background-size: 100% 90%;
+}
+main .leader .leader-content {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+main .leader .leader-content h2 {
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+main .leader .leader-content p {
+  color: hsl(0deg, 0%, 55%);
+}
+main .creation {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+}
+main .creation h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+main .creation section {
+  cursor: pointer;
+  border: 1px solid;
+  height: 8rem;
+  padding: 2.5rem 1.2rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  background-size: cover;
+  background-position: center;
+}
+main .creation section h2 {
+  margin-top: 1rem;
+  position: relative;
+  bottom: 0;
+  text-align: left;
+  width: 40%;
+  font-size: 1.5rem;
+}
+main .creation section:hover {
+  filter: grayscale(50%);
+}
+main .creation .see-all {
+  display: flex;
+  justify-content: center;
+}
+main .creation .see-all #all {
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: "Alata", sans-serif;
+  padding: 0.5rem;
+  width: 50%;
+  background: none;
+  border: none;
+  outline: 1px solid #000;
+}
+main .creation .see-all #all:hover {
+  background-color: #000;
+  color: #fff;
+}
+main .deep-earth {
+  background: url(../image/mobile/image-deep-earth.jpg) no-repeat;
+}
+main .night-arcade {
+  background: url(../image/mobile/image-night-arcade.jpg) no-repeat;
+}
+main .soccer-team {
+  background: url(../image/mobile/image-soccer-team.jpg) no-repeat;
+}
+main .the-grid {
+  background: url(../image/mobile/image-grid.jpg) no-repeat;
+}
+main .from-up-above {
+  background: url(../image/mobile/image-from-above.jpg) no-repeat;
+}
+main .pocket-borealis {
+  background: url(../image/mobile/image-pocket-borealis.jpg) no-repeat;
+}
+main .the-curiosity {
+  background: url(../image/mobile/image-curiosity.jpg) no-repeat;
+}
+main .make-it-fisheye {
+  background: url(../image/mobile/image-fisheye.jpg) no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 5rem 4rem;
+  }
+  main .leader .interactive {
+    height: 20rem;
+    background-size: 100% 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  main {
+    margin-bottom: 8rem;
+    width: 100%;
+    padding: 5rem 6rem;
+  }
+  main .leader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .leader .interactive {
+    width: 130rem;
+    background: url(../image/desktop/image-interactive.jpg) no-repeat;
+    height: 20rem;
+    background-size: 100% 100%;
+  }
+  main .leader .leader-content {
+    background-color: white;
+    padding: 3rem 3rem;
+    margin-top: 6.2rem;
+    margin-left: -3rem;
+    text-align: left;
+  }
+  main .leader .leader-content h2 {
+    font-size: 2rem;
+  }
+  main .leader .leader-content p {
+    font-size: 0.8rem;
+  }
+  main .creation {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-gap: 1rem;
+  }
+  main .creation h2 {
+    text-align: left;
+    grid-column: 1/4;
+    margin-bottom: 1rem;
+  }
+  main .creation section {
+    height: 20rem;
+    padding: 2.5rem 1.2rem 1rem;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  main .creation section h2 {
+    height: 2rem;
+    margin-top: 1rem;
+    position: relative;
+    bottom: -70%;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  main .creation .see-all {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  main .creation .see-all #all {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  main .deep-earth {
+    background: url(../image/desktop/image-deep-earth.jpg) no-repeat;
+  }
+  main .night-arcade {
+    background: url(../image/desktop/image-night-arcade.jpg) no-repeat;
+  }
+  main .soccer-team {
+    background: url(../image/desktop/image-soccer-team.jpg) no-repeat;
+  }
+  main .the-grid {
+    background: url(../image/desktop/image-grid.jpg) no-repeat;
+  }
+  main .from-up-above {
+    background: url(../image/desktop/image-from-above.jpg) no-repeat;
+  }
+  main .pocket-borealis {
+    background: url(../image/desktop/image-pocket-borealis.jpg) no-repeat;
+  }
+  main .the-curiosity {
+    background: url(../image/desktop/image-curiosity.jpg) no-repeat;
+  }
+  main .make-it-fisheye {
+    background: url(../image/desktop/image-fisheye.jpg) no-repeat;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    margin-bottom: 15rem;
+    margin-top: -5rem;
+    padding: 2rem 10rem;
+  }
+  main .leader .interactive {
+    width: 120rem;
+    height: 25rem;
+  }
+  main .leader .leader-content {
+    margin-top: 8rem;
+  }
+  main .leader .leader-content h2 {
+    font-size: 2.5rem;
+  }
+  main .leader .leader-content p {
+    font-size: 1rem;
+  }
+  main .creation {
+    margin-top: 8rem;
+  }
+  main .creation h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  main .creation section {
+    height: 25rem;
+  }
+  main .creation section h2 {
+    font-size: 2rem;
+  }
+  main .creation .see-all {
+    grid-column: 4;
+    grid-row: 1;
+    justify-content: flex-end;
+  }
+  main .creation .see-all #all {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 2560px) {
+  main {
+    margin-bottom: 20rem;
+    margin-top: -5rem;
+    padding: 2rem 15rem;
+  }
+  main .leader .interactive {
+    width: 200rem;
+    height: 40rem;
+  }
+  main .leader .leader-content {
+    margin-top: 11rem;
+    padding: 5rem 4rem;
+  }
+  main .leader .leader-content h2 {
+    font-size: 4rem;
+  }
+  main .leader .leader-content p {
+    font-size: 2rem;
+  }
+  main .creation {
+    margin-top: 12rem;
+  }
+  main .creation h2 {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+  main .creation section {
+    height: 45rem;
+  }
+  main .creation section h2 {
+    font-size: 4rem;
+  }
+  main .creation .see-all #all {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding: 0.5rem;
+    width: 70%;
+  }
+}
+footer {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: #000;
+  color: white;
+}
+footer .logo-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+footer .logo-links nav ul {
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .logo-links nav ul li {
+  padding-bottom: 0.1rem;
+  border: 1px solid transparent;
+}
+footer .logo-links nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid;
+}
+footer .social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+footer .social-links .social-media {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+footer .social-links .social-media a {
+  border: 1px solid transparent;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+}
+footer .social-links .social-media a:hover {
+  border-bottom: 1px solid #fff;
+}
+footer .social-links p {
+  color: hsl(0deg, 0%, 55%);
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 4rem 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .logo-links {
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: unset;
+  }
+  footer .logo-links img {
+    width: 10rem;
+  }
+  footer .logo-links nav ul {
+    font-size: 0.8rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  footer .social-links {
+    justify-content: flex-end;
+    gap: 1.5rem;
+    align-items: unset;
+  }
+  footer .social-links .social-media {
+    justify-content: flex-end;
+  }
+  footer .social-links p {
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: hsl(0deg, 0%, 55%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    padding: 4rem 10rem;
+  }
+  footer .logo-links {
+    gap: 2rem;
+  }
+  footer .logo-links img {
+    width: 15rem;
+  }
+  footer .logo-links nav ul {
+    font-size: 1.2rem;
+  }
+  footer .social-links p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  footer {
+    padding: 10rem 15rem;
+  }
+  footer .logo-links {
+    gap: 4rem;
+  }
+  footer .logo-links img {
+    width: 25rem;
+  }
+  footer .logo-links nav ul {
+    font-size: 2rem;
+  }
+  footer .social-links img {
+    width: 3rem;
+  }
+  footer .social-links p {
+    font-size: 2rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body h1,
+body h2,
+html h1,
+html h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+body p,
+html p {
+  font-family: "Alata", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

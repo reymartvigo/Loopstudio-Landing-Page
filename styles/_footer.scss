@@ -1,0 +1,166 @@
+@use "variable";
+
+footer {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: #000;
+  color: white;
+
+  .logo-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    nav {
+      ul {
+        text-align: center;
+        font-family: variable.$heading;
+        font-weight: 400;
+        letter-spacing: 1px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        li {
+          padding-bottom: 0.1rem;
+          border: 1px solid transparent;
+        }
+        li:hover {
+          cursor: pointer;
+          border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    .social-media {
+      cursor: pointer;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        border: 1px solid transparent;
+        position: relative;
+        text-decoration: none;
+        padding-bottom: 0.3rem;
+      }
+      a:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    p {
+      color: variable.$DarkGray;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 4rem 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo-links {
+      gap: 2rem;
+      justify-content: flex-start;
+      align-items: unset;
+
+      img {
+        width: 10rem;
+      }
+
+      nav {
+        ul {
+          font-size: 0.8rem;
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+      }
+    }
+
+    .social-links {
+      justify-content: flex-end;
+      gap: 1.5rem;
+      align-items: unset;
+      .social-media {
+        justify-content: flex-end;
+      }
+
+      p {
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        color: variable.$DarkGray;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    padding: 4rem 10rem;
+
+    .logo-links {
+      gap: 2rem;
+
+      img {
+        width: 15rem;
+      }
+
+      nav {
+        ul {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .social-links {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  footer {
+    padding: 10rem 15rem;
+
+    .logo-links {
+      gap: 4rem;
+
+      img {
+        width: 25rem;
+      }
+
+      nav {
+        ul {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .social-links {
+      img {
+        width: 3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}

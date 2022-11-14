@@ -1,0 +1,345 @@
+@use "variable";
+
+main {
+  width: 100%;
+  padding: 5rem 2rem;
+
+  .leader {
+    .interactive {
+      width: 100%;
+      height: 15rem;
+      background: url(../image/mobile/image-interactive.jpg) no-repeat;
+      background-size: 100% 90%;
+    }
+
+    .leader-content {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+
+      h2 {
+        font-weight: 300;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+      }
+
+      p {
+        color: variable.$DarkGray;
+      }
+    }
+  }
+
+  .creation {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      cursor: pointer;
+      border: 1px solid;
+      height: 8rem;
+      padding: 2.5rem 1.2rem 1rem;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      color: variable.$White;
+      background-size: cover;
+      background-position: center;
+      h2 {
+        margin-top: 1rem;
+        position: relative;
+        bottom: 0;
+        text-align: left;
+
+        width: 40%;
+        font-size: 1.5rem;
+      }
+    }
+    section:hover {
+      filter: grayscale(50%);
+    }
+
+    .see-all {
+      display: flex;
+      justify-content: center;
+      #all {
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        font-family: variable.$heading;
+        padding: 0.5rem;
+        width: 50%;
+        background: none;
+        border: none;
+        outline: 1px solid #000;
+      }
+      #all:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  .deep-earth {
+    background: url(../image/mobile/image-deep-earth.jpg) no-repeat;
+  }
+
+  .night-arcade {
+    background: url(../image/mobile/image-night-arcade.jpg) no-repeat;
+  }
+  .soccer-team {
+    background: url(../image/mobile/image-soccer-team.jpg) no-repeat;
+  }
+  .the-grid {
+    background: url(../image/mobile/image-grid.jpg) no-repeat;
+  }
+  .from-up-above {
+    background: url(../image/mobile/image-from-above.jpg) no-repeat;
+  }
+
+  .pocket-borealis {
+    background: url(../image/mobile/image-pocket-borealis.jpg) no-repeat;
+  }
+  .the-curiosity {
+    background: url(../image/mobile/image-curiosity.jpg) no-repeat;
+  }
+
+  .make-it-fisheye {
+    background: url(../image/mobile/image-fisheye.jpg) no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 5rem 4rem;
+
+    .leader {
+      .interactive {
+        height: 20rem;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    main {
+      margin-bottom: 8rem;
+      width: 100%;
+      padding: 5rem 6rem;
+
+      .leader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .interactive {
+          width: 130rem;
+
+          background: url(../image/desktop/image-interactive.jpg) no-repeat;
+          height: 20rem;
+          background-size: 100% 100%;
+        }
+
+        .leader-content {
+          background-color: white;
+          padding: 3rem 3rem;
+          margin-top: 6.2rem;
+          margin-left: -3rem;
+
+          text-align: left;
+
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .creation {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+        grid-gap: 1rem;
+
+        h2 {
+          text-align: left;
+          grid-column: 1/4;
+          margin-bottom: 1rem;
+        }
+
+        section {
+          height: 20rem;
+          padding: 2.5rem 1.2rem 1rem;
+          width: 100%;
+          background-size: 100% 100%;
+          background-position: center;
+          h2 {
+            height: 2rem;
+            margin-top: 1rem;
+            position: relative;
+            bottom: -70%;
+            width: 100%;
+            font-size: 1.5rem;
+          }
+        }
+
+        .see-all {
+          grid-column: 4;
+          grid-row: 1;
+
+          #all {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+          }
+        }
+      }
+
+      .deep-earth {
+        background: url(../image/desktop/image-deep-earth.jpg) no-repeat;
+      }
+
+      .night-arcade {
+        background: url(../image/desktop/image-night-arcade.jpg) no-repeat;
+      }
+      .soccer-team {
+        background: url(../image/desktop/image-soccer-team.jpg) no-repeat;
+      }
+      .the-grid {
+        background: url(../image/desktop/image-grid.jpg) no-repeat;
+      }
+      .from-up-above {
+        background: url(../image/desktop/image-from-above.jpg) no-repeat;
+      }
+
+      .pocket-borealis {
+        background: url(../image/desktop/image-pocket-borealis.jpg) no-repeat;
+      }
+      .the-curiosity {
+        background: url(../image/desktop/image-curiosity.jpg) no-repeat;
+      }
+
+      .make-it-fisheye {
+        background: url(../image/desktop/image-fisheye.jpg) no-repeat;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin-bottom: 15rem;
+    margin-top: -5rem;
+    padding: 2rem 10rem;
+
+    .leader {
+      .interactive {
+        width: 120rem;
+        height: 25rem;
+      }
+
+      .leader-content {
+        margin-top: 8rem;
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    .creation {
+      margin-top: 8rem;
+
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+
+      section {
+        height: 25rem;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .see-all {
+        grid-column: 4;
+        grid-row: 1;
+        justify-content: flex-end;
+        #all {
+          margin-bottom: 2rem;
+          font-size: 1rem;
+          padding: 0.5rem;
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 2560px) {
+  main {
+    margin-bottom: 20rem;
+    margin-top: -5rem;
+    padding: 2rem 15rem;
+
+    .leader {
+      .interactive {
+        width: 200rem;
+        height: 40rem;
+      }
+
+      .leader-content {
+        margin-top: 11rem;
+        padding: 5rem 4rem;
+        h2 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+    .creation {
+      margin-top: 12rem;
+
+      h2 {
+        margin-bottom: 4rem;
+        font-size: 4rem;
+      }
+
+      section {
+        height: 45rem;
+        h2 {
+          font-size: 4rem;
+        }
+      }
+
+      .see-all {
+        #all {
+          margin-bottom: 5rem;
+          font-size: 2rem;
+          letter-spacing: 3px;
+          padding: 0.5rem;
+          width: 70%;
+        }
+      }
+    }
+  }
+}
